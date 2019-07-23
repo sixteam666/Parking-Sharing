@@ -10,6 +10,7 @@
     <modules>
         <module>parking_sharing_common</module>
         <module>parking_sharing_eureka</module>
+        <module>parking_sharing_background_admin</module>
     </modules>
 
     <packaging>pom</packaging>
