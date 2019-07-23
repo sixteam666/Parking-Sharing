@@ -20,8 +20,10 @@ spring:
     name: woniu468cloud-provider   #当前服务的名字，后面会用到
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource       # 当前数据源操作类型
-    driver-class-name: com.mysql.cj.jdbc.Driver          # mysql驱动包
-    url: jdbc:mysql://127.0.0.1:3306/parking_sharing?useSSL=true&serverTimezone=GMT&characterEncoding=utf8  # 数据库名称
+    # driver-class-name: com.mysql.cj.jdbc.Driver          # mysql驱动包
+    # url: jdbc:mysql://127.0.0.1:3306/parking_sharing?useSSL=true&serverTimezone=GMT&characterEncoding=utf8  # 数据库名称
+    driver-class-name: com.mysql.jdbc.Driver          # mysql驱动包
+    url: jdbc:mysql://192.168.3.140:3306/parking_sharing  # 数据库名称
     username: root
     password: 1206
     dbcp2:

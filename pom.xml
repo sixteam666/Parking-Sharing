@@ -11,7 +11,7 @@
         <module>parking_sharing_common</module>
         <module>parking_sharing_eureka</module>
         <module>parking_sharing_background_admin</module>
-        <module>parking_sharing_user</module>
+        <module>parking_sharing_backstage_verify</module>
     </modules>
 
     <packaging>pom</packaging>
