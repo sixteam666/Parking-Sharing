@@ -9,7 +9,6 @@
         <module>parking_sharing_common</module>
         <module>parking_sharing_eureka</module>
         <module>parking_sharing_background_admin</module>
-   		<module>parking_sharing_backstage_approval</module>
   </modules>
 
     <packaging>pom</packaging>
