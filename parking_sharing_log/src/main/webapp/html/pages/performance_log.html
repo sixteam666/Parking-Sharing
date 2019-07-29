@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>五分钟上手之柱状图</title>
+          <!-- 引入 echarts.js -->
+          <script src="../js/echarts.min.js"></script>
+          <script src="../js/jQuery-2.2.2-min.js"></script>
+          <!--模板网址：https://www.jianshu.com/p/10ac7e0515f0-->
+     </head>
+     <body>
+          <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+          <div id="main" style="width: 600px;height:400px;"></div>
+          <!-- <script src="../js/vue.js"></script>
+    	  <script src="../js/axios.min.js"></script> -->
+         
+          <script type="text/javascript">
+         	  var arr = [];
+	          $.ajax({
+					type:"get",
+					url:"/performanceLog/findByRequestTime",
+					async:false,
+					success:function(message){
+						arr = message;
+						/* for (var i = 0; i < message.length; i++) {
+							arr[i] = message[i]+"";
+						} */
+						console.info(message)
+					}
+				});
+              // 基于准备好的dom，初始化echarts实例
+              var myChart = echarts.init(document.getElementById('main'));
+              // 指定图表的配置项和数据
+              myChart.setOption({
+                   title: {
+                        text: '请求响应时间统计'
+                   },
+                   tooltip: {},
+                   legend: {
+                        data: ['']
+                   },
+                   xAxis: {
+                        data: ["3s以内","3~5s","5~10s","10s以上"]
+                   },
+                   yAxis: {},
+                   series: [{
+                        name: '响应时间/次数',
+                        type: 'bar',
+                        data: arr
+                   }]
+              });
+              
+          </script>
+     </body>
+</html>
